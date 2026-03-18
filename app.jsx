@@ -5,154 +5,148 @@ const SHOPIFY_DOMAIN = "TU_TIENDA.myshopify.com";
 const promoSlides = [
   {
     eyebrow: "Caviar premium",
-    title: "Selecciones de caviar para mesas, regalos y celebraciones.",
+    title: "Caviar de autor para restaurantes, hoteles y distribuidores.",
     copy:
-      "Curaduría de especies premium con entrega refrigerada, asesoría personalizada y kits listos para regalo ejecutivo.",
+      "Selecciones de Beluga, Ossetra y Kaluga con entrega refrigerada directa a tu negocio. Precios de proveedor y gramajes a escala.",
     image:
       "https://images.unsplash.com/photo-1610440042657-612c34d95e9f?auto=format&fit=crop&w=1400&q=80",
     badge: "Entrega refrigerada",
   },
   {
-    eyebrow: "Ediciones limitadas",
-    title: "Latas, cofres y experiencias para ocasiones serias.",
+    eyebrow: "Pato de especialidad",
+    title: "Confit, magret y foie gras para cocinar con carácter.",
     copy:
-      "Beluga, Ossetra y Kaluga con presentaciones listas para cenas privadas y hospitalidad de alto nivel.",
+      "Pato en sus cortes más nobles: confit de pierna, magret sellado y foie gras de producción artesanal para tu cocina o carta.",
     image:
-      "https://images.unsplash.com/photo-1548940740-204726a19be3?auto=format&fit=crop&w=1400&q=80",
-    badge: "Regalos premium",
+      "https://images.unsplash.com/photo-1559058789-672da06263d8?auto=format&fit=crop&w=1400&q=80",
+    badge: "Producto fresco",
   },
   {
-    eyebrow: "Servicio concierge",
-    title: "Compra por especie, gramaje, maridaje o evento.",
+    eyebrow: "Hongos gourmet",
+    title: "Trufas, morillas y setas silvestres de temporada.",
     copy:
-      "Navegación clara para empujar conversión: categorías visuales, destacados, combos y cajas exclusivas.",
+      "Hongos secos, frescos y en conserva para elevar cualquier receta: trufa negra, shiitake, boletus y más.",
     image:
-      "https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1400&q=80",
-    badge: "Asesoría 1:1",
+      "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1400&q=80",
+    badge: "De temporada",
   },
 ];
 
 const categories = [
   {
-    name: "Beluga",
-    copy: "Notas mantequillosas y textura delicada.",
+    name: "Caviar",
+    copy: "Beluga, Ossetra y Kaluga en gramajes para cada ocasión.",
     image:
-      "https://images.unsplash.com/photo-1548940740-204726a19be3?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1610440042657-612c34d95e9f?auto=format&fit=crop&w=900&q=80",
   },
   {
-    name: "Ossetra",
-    copy: "Perlas firmes con final avellanado.",
+    name: "Pato",
+    copy: "Confit, magret y foie gras de producción artesanal.",
     image:
-      "https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1559058789-672da06263d8?auto=format&fit=crop&w=900&q=80",
   },
   {
-    name: "Kaluga",
-    copy: "Intenso, cremoso y de larga persistencia.",
+    name: "Hongos",
+    copy: "Trufa negra, boletus, morillas y setas silvestres.",
     image:
-      "https://images.unsplash.com/photo-1612528443702-f6741f70a049?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    name: "Kits regalo",
-    copy: "Caviar, blinis, mother of pearl y vodka.",
-    image:
-      "https://images.unsplash.com/photo-1612528443819-4f2482bb2d7e?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=80",
   },
 ];
 
 const collections = [
   {
     title: "Más vendidos",
-    copy: "Selección rápida para primer compra o reposición.",
+    copy: "Los productos de caviar, pato y hongos con más salida entre nuestros clientes.",
   },
   {
-    title: "Para regalar",
-    copy: "Presentaciones premium con montaje impecable.",
+    title: "Temporada",
+    copy: "Hongos frescos, trufas y cortes de pato disponibles según la temporada.",
   },
   {
-    title: "Para cenas privadas",
-    copy: "Gramajes y maridajes pensados para compartir.",
+    title: "Volumen y mayoreo",
+    copy: "Precios especiales para pedidos regulares, restaurantes y distribuidores.",
   },
 ];
 
 const featuredProducts = [
   {
-    name: "Beluga Reserve 30g",
-    description: "Perfil redondo, salinidad elegante y perla sedosa.",
-    price: "$3,900 MXN",
-    handle: "beluga-reserve-30g",
-    variantId: "12345678901234",
-    image:
-      "https://images.unsplash.com/photo-1548940740-204726a19be3?auto=format&fit=crop&w=900&q=80",
-    tag: "Top ventas",
-  },
-  {
     name: "Ossetra Imperial 50g",
-    description: "Textura firme, notas de nuez y final largo.",
+    description: "Perlas firmes, notas avellanadas y salinidad elegante.",
     price: "$4,800 MXN",
     handle: "ossetra-imperial-50g",
+    variantId: "12345678901234",
+    image:
+      "https://images.unsplash.com/photo-1610440042657-612c34d95e9f?auto=format&fit=crop&w=900&q=80",
+    tag: "Top caviar",
+  },
+  {
+    name: "Confit de Pato 2 piezas",
+    description: "Piernas confitadas lentamente en su propia grasa. Listas para calentar.",
+    price: "$780 MXN",
+    handle: "confit-de-pato-2piezas",
     variantId: "12345678901235",
     image:
-      "https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1559058789-672da06263d8?auto=format&fit=crop&w=900&q=80",
     tag: "Favorito",
   },
   {
-    name: "Kaluga Prestige 100g",
-    description: "Boca cremosa y profundidad mineral persistente.",
-    price: "$8,900 MXN",
-    handle: "kaluga-prestige-100g",
+    name: "Trufa Negra Entera 20g",
+    description: "Tuber melanosporum de temporada, aroma intenso y terroso.",
+    price: "$1,250 MXN",
+    handle: "trufa-negra-entera-20g",
     variantId: "12345678901236",
     image:
-      "https://images.unsplash.com/photo-1612528443702-f6741f70a049?auto=format&fit=crop&w=900&q=80",
-    tag: "Reserva",
+      "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=80",
+    tag: "Temporada",
   },
   {
-    name: "Gift Box Signature",
-    description: "Caviar, blinis, creme fraiche y cuchara nacarada.",
-    price: "$6,200 MXN",
-    handle: "gift-box-signature",
+    name: "Kaluga Hybrid 50g",
+    description: "Perla grande, textura cremosa y final largo. Ideal para carta de autor.",
+    price: "$5,200 MXN",
+    handle: "kaluga-hybrid-50g",
     variantId: "12345678901237",
     image:
-      "https://images.unsplash.com/photo-1612528443819-4f2482bb2d7e?auto=format&fit=crop&w=900&q=80",
-    tag: "Regalo",
+      "https://images.unsplash.com/photo-1548940740-204726a19be3?auto=format&fit=crop&w=900&q=80",
+    tag: "Premium",
   },
 ];
 
 const reserveProducts = [
   {
-    name: "Beluga Grand Cru 50g",
-    description: "Lote especial para servicio de alta cocina.",
-    price: "$6,900 MXN",
-    handle: "beluga-grand-cru-50g",
+    name: "Beluga Reserve 30g",
+    description: "Perfil redondo y mantequilloso, salinidad fina y perla sedosa.",
+    price: "$3,900 MXN",
+    handle: "beluga-reserve-30g",
     variantId: "12345678901238",
   },
   {
-    name: "Ossetra Royal 100g",
-    description: "Perla firme y final tostado de alta persistencia.",
-    price: "$9,400 MXN",
-    handle: "ossetra-royal-100g",
+    name: "Magret de Pato 300g",
+    description: "Pechuga entera con su capa de grasa. Sellado y al punto rosado.",
+    price: "$520 MXN",
+    handle: "magret-de-pato-300g",
     variantId: "12345678901239",
   },
   {
-    name: "Kaluga Estate 30g",
-    description: "Acceso ideal al perfil Kaluga con gran balance.",
-    price: "$3,450 MXN",
-    handle: "kaluga-estate-30g",
+    name: "Mix de Setas Silvestres 200g",
+    description: "Boletus, shiitake y girolles secos de recolección artesanal.",
+    price: "$390 MXN",
+    handle: "mix-setas-silvestres-200g",
     variantId: "12345678901240",
   },
   {
-    name: "Colección Degustación",
-    description: "Tres especies en formato comparativo para cata.",
-    price: "$7,800 MXN",
-    handle: "coleccion-degustacion",
+    name: "Foie Gras Entier 180g",
+    description: "Hígado de pato entero en terrina, textura sedosa y sabor profundo.",
+    price: "$1,480 MXN",
+    handle: "foie-gras-entier-180g",
     variantId: "12345678901241",
   },
 ];
 
 const benefits = [
   "Envío nacional en cadena de frío",
-  "Checkout directo a Shopify",
-  "Asesoría por WhatsApp",
-  "Sets de regalo corporativo",
+  "Proveedor directo para negocios",
+  "Precios de mayoreo disponibles",
+  "Atención por WhatsApp",
 ];
 
 function productUrl(handle) {
@@ -169,9 +163,23 @@ function checkoutUrl(items) {
 }
 
 /* ============================================
-   PROMO BANNER — aparece sólo en la primera visita
+   PROMO BANNER — aparece cada vez que se abre la página
    ============================================ */
 function PromoBanner({ onClose }) {
+  const [showForm, setShowForm] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [form, setForm] = useState({ nombre: "", telefono: "", email: "", mensaje: "" });
+
+  function handleChange(e) {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    // Aquí puedes conectar con tu backend, Formspree, etc.
+    setSent(true);
+  }
+
   return (
     <div
       className="promo-overlay"
@@ -184,25 +192,109 @@ function PromoBanner({ onClose }) {
 
         <div className="promo-deco"></div>
 
-        <p className="eyebrow">Oferta de bienvenida</p>
-        <h2 className="promo-title">10% en tu primera compra</h2>
-        <p className="promo-copy">
-          Selecciona tu caviar favorito y aplica el código al finalizar tu pedido. Válido en toda la tienda.
-        </p>
+        {!showForm ? (
+          <>
+            <p className="eyebrow">Oferta de bienvenida</p>
+            <h2 className="promo-title">10% en tu primera compra</h2>
+            <p className="promo-copy">
+              Productos de especialidad con descuento exclusivo en tu primer pedido. Reclama tu código y úsalo al finalizar tu compra.
+            </p>
 
-        <div className="promo-code-box">
-          <span className="promo-code-label">Tu código exclusivo</span>
-          <span className="promo-code-value">BIENVENIDO10</span>
-        </div>
+            <div className="promo-code-box">
+              <span className="promo-code-label">Tu código exclusivo</span>
+              <span className="promo-code-value">BIENVENIDO10</span>
+            </div>
 
-        <div className="promo-actions">
-          <a className="btn" href="#destacados" onClick={onClose}>
-            Ver selección ahora
-          </a>
-          <button className="btn ghost" onClick={onClose}>
-            Continuar sin descuento
-          </button>
-        </div>
+            <div className="promo-actions">
+              <button className="btn" onClick={() => setShowForm(true)}>
+                Reclamar descuento
+              </button>
+              <button className="btn ghost" onClick={onClose}>
+                Continuar sin descuento
+              </button>
+            </div>
+          </>
+        ) : sent ? (
+          <>
+            <p className="eyebrow">¡Listo!</p>
+            <h2 className="promo-title">Te contactamos pronto.</h2>
+            <p className="promo-copy">
+              Recibimos tus datos. En breve te enviamos tu código <strong style={{color:"var(--gold)"}}>BIENVENIDO10</strong> por WhatsApp o email.
+            </p>
+            <button className="btn" style={{width:"100%", borderRadius:"var(--r)"}} onClick={onClose}>
+              Ir a la tienda
+            </button>
+          </>
+        ) : (
+          <>
+            <p className="eyebrow">Reclamar descuento</p>
+            <h2 className="promo-title" style={{fontSize:"clamp(1.5rem,3vw,2rem)", marginBottom:"1.2rem"}}>
+              Déjanos tus datos
+            </h2>
+
+            <form className="promo-form" onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label htmlFor="pf-nombre">Nombre</label>
+                <input
+                  id="pf-nombre"
+                  name="nombre"
+                  type="text"
+                  placeholder="Tu nombre completo"
+                  value={form.nombre}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="pf-telefono">Teléfono</label>
+                <input
+                  id="pf-telefono"
+                  name="telefono"
+                  type="tel"
+                  placeholder="+52 55 0000 0000"
+                  value={form.telefono}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="pf-email">Email</label>
+                <input
+                  id="pf-email"
+                  name="email"
+                  type="email"
+                  placeholder="tu@correo.com"
+                  value={form.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="pf-mensaje">¿Algo específico que busques?</label>
+                <textarea
+                  id="pf-mensaje"
+                  name="mensaje"
+                  placeholder="Ej. busco un kit de regalo para una cena de 6 personas…"
+                  value={form.mensaje}
+                  onChange={handleChange}
+                  rows={3}
+                />
+              </div>
+
+              <div className="promo-actions">
+                <button className="btn" type="submit">
+                  Enviar y reclamar código
+                </button>
+                <button className="btn ghost" type="button" onClick={() => setShowForm(false)}>
+                  Volver
+                </button>
+              </div>
+            </form>
+          </>
+        )}
       </div>
     </div>
   );
@@ -215,14 +307,10 @@ function App() {
   const [activeSlide, setActiveSlide] = useState(0);
   const [showBanner, setShowBanner] = useState(false);
 
-  // Banner: sólo en la primera visita
+  // Banner: aparece cada vez que se carga la página
   useEffect(() => {
-    const hasVisited = localStorage.getItem("sac_visited");
-    if (!hasVisited) {
-      const t = setTimeout(() => setShowBanner(true), 1200);
-      localStorage.setItem("sac_visited", "1");
-      return () => clearTimeout(t);
-    }
+    const t = setTimeout(() => setShowBanner(true), 1200);
+    return () => clearTimeout(t);
   }, []);
 
   // Scroll reveal
@@ -334,8 +422,8 @@ function App() {
 
             <div className="hero-card-foot">
               <div>
-                <strong>Compra gourmet</strong>
-                <p>Promociones, especies y kits curados desde la portada.</p>
+                <strong>Proveedor gourmet</strong>
+                <p>Caviar, pato y hongos de especialidad para tu negocio.</p>
               </div>
 
               <div className="hero-dots">
@@ -359,20 +447,20 @@ function App() {
         <section className="promo-row">
           <div className="container promo-grid reveal">
             <article>
-              <strong>Promoción semanal</strong>
-              <p>Ossetra Imperial + blinis artesanales a precio especial.</p>
+              <strong>Caviar premium</strong>
+              <p>Beluga, Ossetra y Kaluga con entrega refrigerada en 24–48h.</p>
             </article>
             <article>
-              <strong>Cajas de regalo</strong>
-              <p>Sets listos para entrega corporativa o celebración privada.</p>
+              <strong>Pato gourmet</strong>
+              <p>Confit, magret y foie gras de producción artesanal.</p>
             </article>
             <article>
-              <strong>Maridajes</strong>
-              <p>Vodka, champagne y servicio con mother of pearl.</p>
+              <strong>Hongos de especialidad</strong>
+              <p>Trufas, boletus, morillas y setas frescas y secas.</p>
             </article>
             <article>
-              <strong>Atención concierge</strong>
-              <p>Selección guiada según evento, mesa o presupuesto.</p>
+              <strong>Mayoreo y volumen</strong>
+              <p>Precios especiales para pedidos regulares y distribuidores.</p>
             </article>
           </div>
         </section>
@@ -381,8 +469,8 @@ function App() {
         <section id="categorias" className="categories container reveal">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">Compra por especie</p>
-              <h2>Categorías destacadas</h2>
+              <p className="eyebrow">Explora nuestra selección</p>
+              <h2>Caviar, pato y hongos</h2>
             </div>
             <a href={`https://${SHOPIFY_DOMAIN}`} target="_blank" rel="noreferrer">
               Ver todo →
@@ -417,7 +505,7 @@ function App() {
           <div className="section-heading">
             <div>
               <p className="eyebrow">Lo más pedido</p>
-              <h2>Caviar destacado</h2>
+              <h2>Productos destacados</h2>
             </div>
             <a href={checkoutUrl(featuredProducts)} target="_blank" rel="noreferrer">
               Comprar selección →
@@ -451,45 +539,15 @@ function App() {
           </div>
         </section>
 
-        {/* Gift banner */}
-        <section id="regalos" className="gift-banner container reveal">
-          <div className="gift-copy">
-            <p className="eyebrow">Regalos y experiencias</p>
-            <h2>Kits listos para impresionar desde la primera apertura.</h2>
-            <p>
-              Cofres con caviar premium, acompañamientos clásicos y presentación de
-              alto impacto para cenas, clientes y aniversarios.
-            </p>
-            <a className="btn" href={`https://${SHOPIFY_DOMAIN}`} target="_blank" rel="noreferrer">
-              Ver gift boxes
-            </a>
-          </div>
-
-          <div className="gift-panel">
-            <article>
-              <h3>Signature Box</h3>
-              <p>Beluga Reserve, blinis, creme fraiche y cuchara nacarada.</p>
-            </article>
-            <article>
-              <h3>Corporate Box</h3>
-              <p>Formato premium para clientes, directivos y hospitalidad ejecutiva.</p>
-            </article>
-            <article>
-              <h3>Dinner Experience</h3>
-              <p>Selección pensada para maridar con champagne o vodka helado.</p>
-            </article>
-          </div>
-        </section>
-
         {/* Reserves */}
         <section id="reservas" className="reserves container reveal">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">Reserva privada</p>
-              <h2>Selecciones especiales</h2>
+              <p className="eyebrow">También te puede interesar</p>
+              <h2>Más productos</h2>
             </div>
             <a href={`https://${SHOPIFY_DOMAIN}`} target="_blank" rel="noreferrer">
-              Ver más reservas →
+              Ver catálogo completo →
             </a>
           </div>
 
@@ -517,12 +575,12 @@ function App() {
         {/* Service strip */}
         <section id="asesoria" className="service-strip container reveal">
           <div>
-            <p className="eyebrow">Asesoría personalizada</p>
-            <h2>Te ayudamos a elegir caviar por especie, gramaje, maridaje y ocasión.</h2>
+            <p className="eyebrow">Somos tu proveedor</p>
+            <h2>Caviar, pato y hongos con precios de mayoreo para tu restaurante o negocio.</h2>
           </div>
           <div className="service-actions">
             <a className="btn" href="https://wa.me/5210000000000" target="_blank" rel="noreferrer">
-              Pedir recomendación
+              Cotizar por WhatsApp
             </a>
             <a className="btn ghost" href={`https://${SHOPIFY_DOMAIN}`} target="_blank" rel="noreferrer">
               Ir a tienda
@@ -534,7 +592,7 @@ function App() {
         <section className="newsletter container reveal">
           <div>
             <p className="eyebrow">Novedades</p>
-            <h2>Lotes nuevos, cajas exclusivas y promociones privadas.</h2>
+            <h2>Nuevos productos, temporadas y precios de proveedor.</h2>
           </div>
           <a className="btn" href="mailto:hola@saboryarte.com">
             Suscribirme
@@ -546,7 +604,7 @@ function App() {
         <div className="container footer-grid">
           <div>
             <span className="brand">SABOR &amp; ARTE</span>
-            <p>Caviar premium, regalos gourmet y servicio concierge para mesas, clientes y celebraciones.</p>
+            <p>Proveedor de caviar, pato y hongos gourmet para restaurantes, hoteles y distribuidores.</p>
             <div className="footer-social">
               <a className="social-btn whatsapp" href="https://wa.me/5210000000000" target="_blank" rel="noreferrer" aria-label="WhatsApp">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -568,14 +626,15 @@ function App() {
           </div>
           <div>
             <strong>Categorías</strong>
-            <a href="#categorias">Beluga</a>
-            <a href="#categorias">Ossetra</a>
-            <a href="#categorias">Kaluga</a>
-            <a href="#categorias">Kits regalo</a>
+            <a href="#categorias">Caviar</a>
+            <a href="#categorias">Pato</a>
+            <a href="#categorias">Hongos</a>
           </div>
           <div>
-            <strong>Compra</strong>
-            <a href="#destacados">Destacados</a>
+            <strong>Productos</strong>
+            <a href="#categorias">Caviar</a>
+            <a href="#categorias">Pato</a>
+            <a href="#categorias">Hongos</a>
             <a href={`https://${SHOPIFY_DOMAIN}`} target="_blank" rel="noreferrer">Tienda completa</a>
             <a href="mailto:hola@saboryarte.com">hola@saboryarte.com</a>
           </div>

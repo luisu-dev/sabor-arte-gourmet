@@ -1051,6 +1051,53 @@ h2 {
   border-color: rgba(240, 232, 222, 0.2);
 }
 
+/* ---- PROMO FORM ---- */
+.promo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-group label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-inv);
+}
+
+.form-group input,
+.form-group textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line-inv);
+  border-radius: var(--r-sm, 10px);
+  padding: 0.75rem 1rem;
+  color: var(--ink-inv);
+  font-family: "Manrope", sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 200ms, background 200ms;
+  width: 100%;
+  resize: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(168, 154, 142, 0.6);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: rgba(201, 162, 82, 0.5);
+  background: rgba(201, 162, 82, 0.04);
+}
+
 /* ============================================
    REVEAL ANIMATIONS
    ============================================ */
