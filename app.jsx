@@ -1,6 +1,6 @@
 const { useEffect, useState } = React;
 
-const SHOPIFY_DOMAIN = "TU_TIENDA.myshopify.com";
+const SHOPIFY_DOMAIN = "sabor-y-arte-6.myshopify.com";
 
 const promoSlides = [
   {
@@ -35,19 +35,19 @@ const promoSlides = [
 const categories = [
   {
     name: "Caviar",
-    copy: "Beluga, Ossetra y Kaluga en gramajes para cada ocasión.",
+    copy: "Beluga, Oscetra y Baerii en presentaciones de 30 g, 50 g y 100 g.",
     image:
-      "https://images.unsplash.com/photo-1610440042657-612c34d95e9f?auto=format&fit=crop&w=900&q=80",
+      "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/productos_sabor_arte3.png?v=1775221497",
   },
   {
     name: "Pato",
-    copy: "Confit, magret y foie gras de producción artesanal.",
+    copy: "Foie gras, magret, confit y más cortes de pato nacional e importado.",
     image:
-      "https://images.unsplash.com/photo-1559058789-672da06263d8?auto=format&fit=crop&w=900&q=80",
+      "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/productos_sabor_arte6.png?v=1775222363",
   },
   {
     name: "Hongos",
-    copy: "Trufa negra, boletus, morillas y setas silvestres.",
+    copy: "Morilla, porcini, shiitake, setas frescas y mezclas deshidratadas.",
     image:
       "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=80",
   },
@@ -70,75 +70,75 @@ const collections = [
 
 const featuredProducts = [
   {
-    name: "Ossetra Imperial 50g",
-    description: "Perlas firmes, notas avellanadas y salinidad elegante.",
-    price: "$4,800 MXN",
-    handle: "ossetra-imperial-50g",
-    variantId: "12345678901234",
+    name: "Caviar Beluga 30g",
+    description: "La variedad más exclusiva. Perla sedosa, sabor suave y mantecoso.",
+    price: "$2,145 MXN + IVA",
+    handle: "caviar-beluga",
+    variantId: "VARIANT_ID_AQUI",
     image:
-      "https://images.unsplash.com/photo-1610440042657-612c34d95e9f?auto=format&fit=crop&w=900&q=80",
+      "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/productos_sabor_arte3.png?v=1775221497",
     tag: "Top caviar",
   },
   {
-    name: "Confit de Pato 2 piezas",
-    description: "Piernas confitadas lentamente en su propia grasa. Listas para calentar.",
-    price: "$780 MXN",
-    handle: "confit-de-pato-2piezas",
-    variantId: "12345678901235",
+    name: "Caviar Baerii 30g",
+    description: "Esturión Baerii. Sabor maduro, sutilmente salado. Textura firme y aterciopelada.",
+    price: "$1,368 MXN + IVA",
+    handle: "caviar-baerii",
+    variantId: "VARIANT_ID_AQUI",
     image:
-      "https://images.unsplash.com/photo-1559058789-672da06263d8?auto=format&fit=crop&w=900&q=80",
+      "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/afiraCaviar_4.png?v=1773862435",
     tag: "Favorito",
   },
   {
-    name: "Trufa Negra Entera 20g",
-    description: "Tuber melanosporum de temporada, aroma intenso y terroso.",
-    price: "$1,250 MXN",
-    handle: "trufa-negra-entera-20g",
-    variantId: "12345678901236",
+    name: "Foie Gras Grado A",
+    description: "Pieza entera 800g–1kg. Textura suave y cremosa que se funde en boca.",
+    price: "$2,206 MXN + IVA",
+    handle: "pato",
+    variantId: "VARIANT_ID_AQUI",
     image:
-      "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=80",
-    tag: "Temporada",
+      "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/productos_sabor_arte6.png?v=1775222363",
+    tag: "Alta cocina",
   },
   {
-    name: "Kaluga Hybrid 50g",
-    description: "Perla grande, textura cremosa y final largo. Ideal para carta de autor.",
-    price: "$5,200 MXN",
-    handle: "kaluga-hybrid-50g",
-    variantId: "12345678901237",
+    name: "Foie Gras Torchon",
+    description: "Listo para cortar y servir. 235g. Textura delicada y sabor profundo y refinado.",
+    price: "$725 MXN + IVA",
+    handle: "foie-gras-torchon",
+    variantId: "VARIANT_ID_AQUI",
     image:
-      "https://images.unsplash.com/photo-1548940740-204726a19be3?auto=format&fit=crop&w=900&q=80",
-    tag: "Premium",
+      "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/FoieGrasTorchon-Duck-BellaBellaGourmet.png?v=1775223140",
+    tag: "Listo para servir",
   },
 ];
 
 const reserveProducts = [
   {
-    name: "Beluga Reserve 30g",
-    description: "Perfil redondo y mantequilloso, salinidad fina y perla sedosa.",
-    price: "$3,900 MXN",
-    handle: "beluga-reserve-30g",
-    variantId: "12345678901238",
+    name: "Magret Natural Importado",
+    description: "Pechuga de pato 700g–1kg. Capa de grasa para exterior crujiente e interior jugoso.",
+    price: "$1,000 MXN + IVA",
+    handle: "magret-natural-importado",
+    variantId: "VARIANT_ID_AQUI",
   },
   {
-    name: "Magret de Pato 300g",
-    description: "Pechuga entera con su capa de grasa. Sellado y al punto rosado.",
-    price: "$520 MXN",
-    handle: "magret-de-pato-300g",
-    variantId: "12345678901239",
+    name: "Pierna y Muslo Confitada",
+    description: "Pato Moulard confitado en su propia grasa. 1 kg. Listo para calentar y servir.",
+    price: "$1,289 MXN + IVA",
+    handle: "pierna-y-muslo-confitada",
+    variantId: "VARIANT_ID_AQUI",
   },
   {
-    name: "Mix de Setas Silvestres 200g",
-    description: "Boletus, shiitake y girolles secos de recolección artesanal.",
-    price: "$390 MXN",
-    handle: "mix-setas-silvestres-200g",
-    variantId: "12345678901240",
+    name: "Hongo Morilla Deshidratado",
+    description: "1 kg. Sabor profundo e intenso. Ideal para salsas, risottos y alta cocina.",
+    price: "$10,920 MXN + IVA",
+    handle: "hongo-morilla-deshidratado",
+    variantId: "VARIANT_ID_AQUI",
   },
   {
-    name: "Foie Gras Entier 180g",
-    description: "Hígado de pato entero en terrina, textura sedosa y sabor profundo.",
-    price: "$1,480 MXN",
-    handle: "foie-gras-entier-180g",
-    variantId: "12345678901241",
+    name: "Mezcla de Setas Deshidratadas",
+    description: "1 kg. Selección de hongos. Perfil complejo y balanceado para pastas y salsas.",
+    price: "$3,120 MXN + IVA",
+    handle: "mezcla-de-setas-deshidratadas",
+    variantId: "VARIANT_ID_AQUI",
   },
 ];
 
