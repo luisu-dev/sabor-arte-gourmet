@@ -179,10 +179,6 @@ function directCartUrl(variantId) {
   return `https://${SHOPIFY_DOMAIN}/cart/${variantId}:1`;
 }
 
-function checkoutUrl(items) {
-  const path = items.map((p) => `${p.variantId}:1`).join(",");
-  return `https://${SHOPIFY_DOMAIN}/cart/${path}`;
-}
 
 /* ============================================
    PROMO BANNER — aparece cada vez que se abre la página
@@ -329,6 +325,27 @@ function App() {
   const [activeSlide, setActiveSlide] = useState(0);
   const [showBanner, setShowBanner] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [nlEmail, setNlEmail] = useState("");
+  const [nlStatus, setNlStatus] = useState("idle"); // idle | sending | done | error
+
+  async function handleNewsletter(e) {
+    e.preventDefault();
+    setNlStatus("sending");
+    try {
+      const res = await fetch("https://formspree.io/f/xbdppzbg", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ email: nlEmail }),
+      });
+      if (res.ok) {
+        setNlStatus("done");
+      } else {
+        setNlStatus("error");
+      }
+    } catch {
+      setNlStatus("error");
+    }
+  }
 
   function handleSearch(e) {
     e.preventDefault();
@@ -420,8 +437,8 @@ function App() {
               <a className="nav-pill" href={`https://${SHOPIFY_DOMAIN}`} target="_blank" rel="noreferrer">
                 Ver Shopify
               </a>
-              <a className="btn" href={checkoutUrl(featuredProducts)} target="_blank" rel="noreferrer">
-                Comprar selección
+              <a className="btn" href={`https://${SHOPIFY_DOMAIN}/collections/all`} target="_blank" rel="noreferrer">
+                Ver tienda
               </a>
             </div>
           </div>
@@ -549,8 +566,8 @@ function App() {
               <p className="eyebrow">Lo más pedido</p>
               <h2>Productos destacados</h2>
             </div>
-            <a href={checkoutUrl(featuredProducts)} target="_blank" rel="noreferrer">
-              Comprar selección →
+            <a href={`https://${SHOPIFY_DOMAIN}/collections/all`} target="_blank" rel="noreferrer">
+              Ver catálogo →
             </a>
           </div>
 
@@ -636,9 +653,32 @@ function App() {
             <p className="eyebrow">Novedades</p>
             <h2>Nuevos productos, temporadas y precios de proveedor.</h2>
           </div>
-          <a className="btn" href="mailto:hola@saboryarte.com">
-            Suscribirme
-          </a>
+          {nlStatus === "done" ? (
+            <div className="nl-success">
+              <p>¡Listo! Tu código de descuento:</p>
+              <strong className="promo-code-value">BIENVENIDO10</strong>
+              <p style={{fontSize:"0.85rem", marginTop:"0.5rem"}}>Úsalo al finalizar tu compra en la tienda.</p>
+            </div>
+          ) : (
+            <form className="nl-form" onSubmit={handleNewsletter}>
+              <input
+                type="email"
+                placeholder="tu@correo.com"
+                value={nlEmail}
+                onChange={(e) => setNlEmail(e.target.value)}
+                required
+                disabled={nlStatus === "sending"}
+              />
+              <button className="btn" type="submit" disabled={nlStatus === "sending"}>
+                {nlStatus === "sending" ? "Enviando…" : "Obtener 10% de descuento"}
+              </button>
+              {nlStatus === "error" && (
+                <p style={{color:"#e55", fontSize:"0.85rem", marginTop:"0.5rem"}}>
+                  Hubo un error, intenta de nuevo.
+                </p>
+              )}
+            </form>
+          )}
         </section>
       </main>
 

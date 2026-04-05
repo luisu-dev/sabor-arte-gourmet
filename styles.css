@@ -829,6 +829,46 @@ h2 {
   color: var(--muted);
 }
 
+.nl-form {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.nl-form input {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.65rem 1.2rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  background: var(--bg);
+  color: var(--ink);
+  outline: none;
+  min-width: 200px;
+}
+
+.nl-form input:focus {
+  border-color: var(--gold);
+}
+
+.nl-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.nl-success {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.nl-success .promo-code-value {
+  display: block;
+  font-size: 1.4rem;
+  margin-top: 0.4rem;
+}
+
 /* ---- FOOTER ---- */
 .footer {
   background: var(--bg-dark);
