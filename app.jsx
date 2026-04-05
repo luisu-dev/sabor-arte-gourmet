@@ -16,13 +16,20 @@ const promoSlides = [
     title: "Confit, magret y foie gras para cocinar con carácter.",
     copy:
       "Pato en sus cortes más nobles: confit de pierna, magret sellado y foie gras de producción artesanal para tu cocina o carta.",
-    image:
-      "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/productos_sabor_arte6.png?v=1775222363",
+    image: "./hero/pato.png",
     badge: "Producto fresco",
   },
   {
+    eyebrow: "Trufa negra de invierno",
+    title: "Tuber melanosporum. Intensidad aromática en su máxima expresión.",
+    copy:
+      "Trufa entera seleccionada a mano, origen Italia, Francia y España. Enviada para conservar su máxima frescura. Venta por gramo.",
+    image: "./hero/trufa.png",
+    badge: "Temporada",
+  },
+  {
     eyebrow: "Hongos gourmet",
-    title: "Trufas, morillas y setas silvestres de temporada.",
+    title: "Morillas, porcini y setas silvestres de temporada.",
     copy:
       "Hongos secos, frescos y en conserva para elevar cualquier receta: trufa negra, shiitake, boletus y más.",
     image: "./hero/hongos.png",
@@ -50,6 +57,12 @@ const categories = [
     image: "./hero/hongos.png",
     handle: "hongo",
   },
+  {
+    name: "Trufa",
+    copy: "Trufa negra de invierno Tuber melanosporum. Aroma profundo, terroso y complejo.",
+    image: "./hero/trufa.png",
+    handle: "trufa",
+  },
 ];
 
 const collections = [
@@ -69,74 +82,88 @@ const collections = [
 
 const featuredProducts = [
   {
-    name: "Caviar Beluga 30g",
-    description: "La variedad más exclusiva. Perla sedosa, sabor suave y mantecoso.",
+    name: "Caviar Oscetra 30g",
+    description: "Notas a nuez y mantequilla, textura firme y cremosa. Origen esturión Oscetra.",
     price: "$2,145 MXN + IVA",
-    handle: "caviar-beluga",
+    handle: "caviar-oscetra",
     variantId: "VARIANT_ID_AQUI",
     image:
-      "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/productos_sabor_arte3.png?v=1775221497",
-    tag: "Top caviar",
+      "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/productos_sabor_arte2.png?v=1775221380",
+    tag: "Caviar",
   },
   {
-    name: "Caviar Baerii 30g",
-    description: "Esturión Baerii. Sabor maduro, sutilmente salado. Textura firme y aterciopelada.",
-    price: "$1,368 MXN + IVA",
-    handle: "caviar-baerii",
+    name: "Magret Natural Importado",
+    description: "Pechuga de pato 700g–1kg. Exterior crujiente, interior jugoso. Sabor intenso.",
+    price: "$1,000 MXN + IVA",
+    handle: "magret-natural-importado",
     variantId: "VARIANT_ID_AQUI",
     image:
-      "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/afiraCaviar_4.png?v=1773862435",
-    tag: "Favorito",
+      "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/productos_sabor_arte5_ddcdfe31-0e16-4c2c-bdef-3e7c69006899.png?v=1775222363",
+    tag: "Pato",
   },
   {
-    name: "Foie Gras Grado A",
-    description: "Pieza entera 800g–1kg. Textura suave y cremosa que se funde en boca.",
-    price: "$2,206 MXN + IVA",
-    handle: "pato",
+    name: "Hongo Morilla Deshidratado",
+    description: "1 kg. Sabor profundo e intenso, altamente valorado en alta cocina.",
+    price: "$10,920 MXN + IVA",
+    handle: "hongo-morilla-deshidratado",
     variantId: "VARIANT_ID_AQUI",
     image:
-      "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/productos_sabor_arte6.png?v=1775222363",
-    tag: "Alta cocina",
+      "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=80",
+    tag: "Hongos",
   },
   {
-    name: "Foie Gras Torchon",
-    description: "Listo para cortar y servir. 235g. Textura delicada y sabor profundo y refinado.",
-    price: "$725 MXN + IVA",
-    handle: "foie-gras-torchon",
+    name: "Foie Gras en Cubos",
+    description: "400g–600g. Práctico para canapes, entradas y platos elegantes. Listo para saltear.",
+    price: "$1,726 MXN + IVA",
+    handle: "foie-gras-en-cubos",
     variantId: "VARIANT_ID_AQUI",
     image:
-      "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/FoieGrasTorchon-Duck-BellaBellaGourmet.png?v=1775223140",
-    tag: "Listo para servir",
+      "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/productos_sabor_arte7.png?v=1775222769",
+    tag: "Foie gras",
   },
 ];
 
 const reserveProducts = [
   {
-    name: "Magret Natural Importado",
-    description: "Pechuga de pato 700g–1kg. Capa de grasa para exterior crujiente e interior jugoso.",
-    price: "$1,000 MXN + IVA",
-    handle: "magret-natural-importado",
+    name: "Caviar Beluga 50g",
+    description: "La variedad más exclusiva. Perla sedosa, sabor suave y mantecoso.",
+    price: "$3,204 MXN + IVA",
+    handle: "caviar-beluga",
     variantId: "VARIANT_ID_AQUI",
   },
   {
-    name: "Pierna y Muslo Confitada",
-    description: "Pato Moulard confitado en su propia grasa. 1 kg. Listo para calentar y servir.",
-    price: "$1,289 MXN + IVA",
-    handle: "pierna-y-muslo-confitada",
+    name: "Foie Gras Torchon",
+    description: "235g listo para cortar y servir. Textura delicada, sabor refinado.",
+    price: "$725 MXN + IVA",
+    handle: "foie-gras-torchon",
     variantId: "VARIANT_ID_AQUI",
   },
   {
-    name: "Hongo Morilla Deshidratado",
-    description: "1 kg. Sabor profundo e intenso. Ideal para salsas, risottos y alta cocina.",
-    price: "$10,920 MXN + IVA",
-    handle: "hongo-morilla-deshidratado",
+    name: "Trufa Invierno",
+    description: "Tuber melanosporum entera. Aroma terroso y complejo. Venta por gramo.",
+    price: "Precio por gramo",
+    handle: "trufa-invierno",
     variantId: "VARIANT_ID_AQUI",
   },
   {
     name: "Mezcla de Setas Deshidratadas",
-    description: "1 kg. Selección de hongos. Perfil complejo y balanceado para pastas y salsas.",
+    description: "1 kg. Combinación de hongos. Perfil complejo para risottos, pastas y salsas.",
     price: "$3,120 MXN + IVA",
     handle: "mezcla-de-setas-deshidratadas",
+    variantId: "VARIANT_ID_AQUI",
+  },
+  {
+    name: "Prosciutto de Pato",
+    description: "Pechuga curada y añejada en seco. 400–600g. Levemente picante con notas dulces.",
+    price: "$1,920 MXN + IVA",
+    handle: "prosciutto-importado-de-pato",
+    variantId: "VARIANT_ID_AQUI",
+  },
+  {
+    name: "Yuzu Kosho",
+    description: "80g. Condimento japonés. Perfil cítrico, picante y umami. Ideal para mariscos.",
+    price: "$444 MXN + IVA",
+    handle: "yuzu-kosho",
     variantId: "VARIANT_ID_AQUI",
   },
 ];
@@ -648,12 +675,14 @@ function App() {
             <a href={`https://${SHOPIFY_DOMAIN}/collections/all?filter.p.tag=caviar`} target="_blank" rel="noreferrer">Caviar</a>
             <a href={`https://${SHOPIFY_DOMAIN}/collections/all?filter.p.tag=Pato`} target="_blank" rel="noreferrer">Pato</a>
             <a href={`https://${SHOPIFY_DOMAIN}/collections/all?filter.p.tag=hongo`} target="_blank" rel="noreferrer">Hongos</a>
+            <a href={`https://${SHOPIFY_DOMAIN}/products/trufa-invierno`} target="_blank" rel="noreferrer">Trufa</a>
           </div>
           <div>
             <strong>Productos</strong>
             <a href={`https://${SHOPIFY_DOMAIN}/collections/all?filter.p.tag=caviar`} target="_blank" rel="noreferrer">Caviar</a>
             <a href={`https://${SHOPIFY_DOMAIN}/collections/all?filter.p.tag=Pato`} target="_blank" rel="noreferrer">Pato</a>
             <a href={`https://${SHOPIFY_DOMAIN}/collections/all?filter.p.tag=hongo`} target="_blank" rel="noreferrer">Hongos</a>
+            <a href={`https://${SHOPIFY_DOMAIN}/products/trufa-invierno`} target="_blank" rel="noreferrer">Trufa</a>
             <a href={`https://${SHOPIFY_DOMAIN}`} target="_blank" rel="noreferrer">Tienda completa</a>
             <a href="mailto:hola@saboryarte.com">hola@saboryarte.com</a>
           </div>
