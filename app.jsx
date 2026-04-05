@@ -87,8 +87,7 @@ const featuredProducts = [
     price: "$2,145 MXN + IVA",
     handle: "caviar-oscetra",
     variantId: "VARIANT_ID_AQUI",
-    image:
-      "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/productos_sabor_arte2.png?v=1775221380",
+    image: "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/productos_sabor_arte2.png?v=1775221380",
     tag: "Caviar",
   },
   {
@@ -97,8 +96,7 @@ const featuredProducts = [
     price: "$1,000 MXN + IVA",
     handle: "magret-natural-importado",
     variantId: "VARIANT_ID_AQUI",
-    image:
-      "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/productos_sabor_arte5_ddcdfe31-0e16-4c2c-bdef-3e7c69006899.png?v=1775222363",
+    image: "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/productos_sabor_arte_26.png?v=1775361945",
     tag: "Pato",
   },
   {
@@ -107,18 +105,16 @@ const featuredProducts = [
     price: "$10,920 MXN + IVA",
     handle: "hongo-morilla-deshidratado",
     variantId: "VARIANT_ID_AQUI",
-    image:
-      "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=80",
+    image: "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/productos_sabor_arte_7.png?v=1775359490",
     tag: "Hongos",
   },
   {
-    name: "Foie Gras en Cubos",
-    description: "400g–600g. Práctico para canapes, entradas y platos elegantes. Listo para saltear.",
-    price: "$1,726 MXN + IVA",
-    handle: "foie-gras-en-cubos",
+    name: "Foie Gras Torchon",
+    description: "235g listo para cortar y servir. Textura delicada, sabor refinado y profundo.",
+    price: "$725 MXN + IVA",
+    handle: "foie-gras-torchon",
     variantId: "VARIANT_ID_AQUI",
-    image:
-      "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/productos_sabor_arte7.png?v=1775222769",
+    image: "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/FoieGrasTorchon-Duck-BellaBellaGourmet.png?v=1775223140",
     tag: "Foie gras",
   },
 ];
