@@ -188,6 +188,16 @@ h2 {
   border-color: rgba(240, 232, 222, 0.25);
 }
 
+.search-shell input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  width: 100%;
+}
+
 .nav-actions,
 .hero-actions,
 .card-actions,
@@ -484,6 +494,9 @@ h2 {
   border: 1px solid var(--line);
   cursor: pointer;
   transition: box-shadow 240ms, transform 240ms;
+  text-decoration: none;
+  display: block;
+  color: inherit;
 }
 
 .category-card:hover {

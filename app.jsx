@@ -7,9 +7,8 @@ const promoSlides = [
     eyebrow: "Caviar premium",
     title: "Caviar de autor para restaurantes, hoteles y distribuidores.",
     copy:
-      "Selecciones de Beluga, Ossetra y Kaluga con entrega refrigerada directa a tu negocio. Precios de proveedor y gramajes a escala.",
-    image:
-      "https://images.unsplash.com/photo-1610440042657-612c34d95e9f?auto=format&fit=crop&w=1400&q=80",
+      "Selecciones de Beluga, Oscetra y Baerii con entrega refrigerada directa a tu negocio. Precios de proveedor y gramajes a escala.",
+    image: "./hero/caviar.png",
     badge: "Entrega refrigerada",
   },
   {
@@ -18,7 +17,7 @@ const promoSlides = [
     copy:
       "Pato en sus cortes más nobles: confit de pierna, magret sellado y foie gras de producción artesanal para tu cocina o carta.",
     image:
-      "https://images.unsplash.com/photo-1559058789-672da06263d8?auto=format&fit=crop&w=1400&q=80",
+      "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/productos_sabor_arte6.png?v=1775222363",
     badge: "Producto fresco",
   },
   {
@@ -26,8 +25,7 @@ const promoSlides = [
     title: "Trufas, morillas y setas silvestres de temporada.",
     copy:
       "Hongos secos, frescos y en conserva para elevar cualquier receta: trufa negra, shiitake, boletus y más.",
-    image:
-      "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1400&q=80",
+    image: "./hero/hongos.png",
     badge: "De temporada",
   },
 ];
@@ -36,20 +34,21 @@ const categories = [
   {
     name: "Caviar",
     copy: "Beluga, Oscetra y Baerii en presentaciones de 30 g, 50 g y 100 g.",
-    image:
-      "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/productos_sabor_arte3.png?v=1775221497",
+    image: "./hero/caviar.png",
+    handle: "caviar",
   },
   {
     name: "Pato",
     copy: "Foie gras, magret, confit y más cortes de pato nacional e importado.",
     image:
       "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/productos_sabor_arte6.png?v=1775222363",
+    handle: "Pato",
   },
   {
     name: "Hongos",
     copy: "Morilla, porcini, shiitake, setas frescas y mezclas deshidratadas.",
-    image:
-      "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=80",
+    image: "./hero/hongos.png",
+    handle: "hongo",
   },
 ];
 
@@ -306,6 +305,14 @@ function PromoBanner({ onClose }) {
 function App() {
   const [activeSlide, setActiveSlide] = useState(0);
   const [showBanner, setShowBanner] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  function handleSearch(e) {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      window.open(`https://${SHOPIFY_DOMAIN}/search?q=${encodeURIComponent(searchQuery.trim())}`, "_blank");
+    }
+  }
 
   // Banner: aparece cada vez que se carga la página
   useEffect(() => {
@@ -376,9 +383,15 @@ function App() {
               <a href="#contacto">Contacto</a>
             </div>
 
-            <div className="search-shell" aria-label="Búsqueda simulada">
-              <span>Buscar caviar, gramajes, cajas regalo…</span>
-            </div>
+            <form className="search-shell" onSubmit={handleSearch} aria-label="Buscar productos">
+              <input
+                type="text"
+                placeholder="Buscar caviar, gramajes, cajas regalo…"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                aria-label="Buscar"
+              />
+            </form>
 
             <div className="nav-actions">
               <a className="nav-pill" href={`https://${SHOPIFY_DOMAIN}`} target="_blank" rel="noreferrer">
@@ -479,13 +492,19 @@ function App() {
 
           <div className="category-grid">
             {categories.map((category) => (
-              <article className="category-card" key={category.name}>
+              <a
+                className="category-card"
+                key={category.name}
+                href={`https://${SHOPIFY_DOMAIN}/collections/all?sort_by=title&filter.p.tag=${category.handle}`}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img src={category.image} alt={category.name} loading="lazy" />
                 <div className="category-copy">
                   <h3>{category.name}</h3>
                   <p>{category.copy}</p>
                 </div>
-              </article>
+              </a>
             ))}
           </div>
         </section>
@@ -626,15 +645,15 @@ function App() {
           </div>
           <div>
             <strong>Categorías</strong>
-            <a href="#categorias">Caviar</a>
-            <a href="#categorias">Pato</a>
-            <a href="#categorias">Hongos</a>
+            <a href={`https://${SHOPIFY_DOMAIN}/collections/all?filter.p.tag=caviar`} target="_blank" rel="noreferrer">Caviar</a>
+            <a href={`https://${SHOPIFY_DOMAIN}/collections/all?filter.p.tag=Pato`} target="_blank" rel="noreferrer">Pato</a>
+            <a href={`https://${SHOPIFY_DOMAIN}/collections/all?filter.p.tag=hongo`} target="_blank" rel="noreferrer">Hongos</a>
           </div>
           <div>
             <strong>Productos</strong>
-            <a href="#categorias">Caviar</a>
-            <a href="#categorias">Pato</a>
-            <a href="#categorias">Hongos</a>
+            <a href={`https://${SHOPIFY_DOMAIN}/collections/all?filter.p.tag=caviar`} target="_blank" rel="noreferrer">Caviar</a>
+            <a href={`https://${SHOPIFY_DOMAIN}/collections/all?filter.p.tag=Pato`} target="_blank" rel="noreferrer">Pato</a>
+            <a href={`https://${SHOPIFY_DOMAIN}/collections/all?filter.p.tag=hongo`} target="_blank" rel="noreferrer">Hongos</a>
             <a href={`https://${SHOPIFY_DOMAIN}`} target="_blank" rel="noreferrer">Tienda completa</a>
             <a href="mailto:hola@saboryarte.com">hola@saboryarte.com</a>
           </div>
