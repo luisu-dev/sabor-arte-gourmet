@@ -951,7 +951,118 @@ h2 {
 .social-btn.whatsapp:hover  { background: rgba(37, 211, 102, 0.15); border-color: rgba(37, 211, 102, 0.4); color: #25d366; }
 .social-btn.instagram:hover { background: rgba(228, 64, 95, 0.15);  border-color: rgba(228, 64, 95, 0.4);  color: #e4405f; }
 .social-btn.facebook:hover  { background: rgba(24, 119, 242, 0.15); border-color: rgba(24, 119, 242, 0.4); color: #1877f2; }
-.social-btn.tiktok:hover    { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.3); color: #fff; }
+/* ============================================
+   WHATSAPP FLOATING BUTTON
+   ============================================ */
+
+.wa-float-btn {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  z-index: 900;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.75rem 1.3rem;
+  background: #25D366;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+  transition: transform 200ms, box-shadow 200ms, background 200ms;
+}
+
+.wa-float-btn:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.55);
+}
+
+.wa-float-btn:active {
+  transform: translateY(0);
+}
+
+/* ---- WA MODAL ---- */
+.wa-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 8, 6, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: overlayIn 350ms ease;
+}
+
+.wa-modal {
+  background: var(--bg-dark);
+  border: 1px solid var(--line-inv);
+  border-radius: var(--r-xl);
+  padding: clamp(2rem, 4vw, 2.5rem) clamp(1.5rem, 3vw, 2rem);
+  max-width: 440px;
+  width: 100%;
+  position: relative;
+  animation: modalIn 420ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wa-modal-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  margin-bottom: 1.5rem;
+  padding-right: 2rem;
+}
+
+.wa-modal-title {
+  font-family: "Cormorant Garamond", serif;
+  color: var(--ink-inv);
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+  line-height: 1.2;
+}
+
+.wa-modal-sub {
+  color: var(--muted-inv);
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.wa-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.wa-submit-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  background: #25D366;
+  border-color: #25D366;
+}
+
+.wa-submit-btn:hover {
+  background: #1ebe5d;
+  border-color: #1ebe5d;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+}
+
+@media (max-width: 560px) {
+  .wa-float-btn span { display: none; }
+  .wa-float-btn { padding: 0.85rem; border-radius: 50%; }
+}
 
 /* ============================================
    PROMO BANNER (PRIMERA VISITA)
