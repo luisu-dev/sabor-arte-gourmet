@@ -1291,3 +1291,137 @@ h2 {
     font-size: 1.65rem;
   }
 }
+
+/* ============================================
+   WHATSAPP FLOTANTE
+   ============================================ */
+
+.wa-float-btn {
+  position: fixed;
+  bottom: 1.8rem;
+  right: 1.8rem;
+  z-index: 900;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+  transition: transform 200ms, box-shadow 200ms;
+}
+
+.wa-float-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.6);
+}
+
+.wa-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 8, 6, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.wa-modal {
+  background: #fff;
+  border-radius: 1.2rem;
+  padding: 2rem 1.8rem 1.8rem;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.wa-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #888;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.4rem;
+  transition: background 150ms, color 150ms;
+}
+
+.wa-modal-close:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.wa-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: #25d366;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.wa-modal-sub {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0 0 1.2rem;
+}
+
+.wa-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.wa-form input {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 0.6rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: #222;
+  background: #fafafa;
+  transition: border-color 150ms;
+  box-sizing: border-box;
+}
+
+.wa-form input:focus {
+  outline: none;
+  border-color: #25d366;
+  background: #fff;
+}
+
+.wa-form-submit {
+  margin-top: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: #25d366;
+  color: #fff;
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 150ms;
+}
+
+.wa-form-submit:hover {
+  background: #1ebe5d;
+}
