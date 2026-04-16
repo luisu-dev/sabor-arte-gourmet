@@ -471,7 +471,7 @@ function App() {
           <a className="utility-link" href={`https://${SHOPIFY_DOMAIN}`} target="_blank" rel="noreferrer">
             Tienda completa
           </a>
-          <span className="brand">SABOR &amp; ARTE</span>
+          <img src="./Logo ARTE Y SABOR GOURME.svg" alt="Sabor y Arte Gourmet" className="brand-logo" />
           <a className="utility-link" href="https://wa.me/5210000000000" target="_blank" rel="noreferrer">
             WhatsApp
           </a>
@@ -750,7 +750,7 @@ function App() {
       <footer className="footer" id="contacto">
         <div className="container footer-grid">
           <div>
-            <span className="brand">SABOR &amp; ARTE</span>
+            <img src="./Logo ARTE Y SABOR GOURME.svg" alt="Sabor y Arte Gourmet" className="brand-logo brand-logo--footer" />
             <p>Proveedor de caviar, pato y hongos gourmet para restaurantes, hoteles y distribuidores.</p>
             <div className="footer-social">
               <a className="social-btn instagram" href="https://www.instagram.com/sabor_arteg?igsh=YmVucXJsYThkdnp3" target="_blank" rel="noreferrer" aria-label="Instagram">

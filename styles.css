@@ -119,6 +119,18 @@ h2 {
   text-align: center;
 }
 
+.brand-logo {
+  height: 52px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.brand-logo--footer {
+  height: 64px;
+  margin-bottom: 0.75rem;
+}
+
 /* ---- STICKY NAV ---- */
 .nav-shell {
   position: sticky;
