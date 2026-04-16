@@ -468,7 +468,7 @@ function App() {
 
         {/* Utility bar */}
         <div className="container utility-bar">
-          <a className="utility-link" href={`https://${SHOPIFY_DOMAIN}`} target="_blank" rel="noreferrer">
+          <a className="utility-link" href={`https://${SHOPIFY_DOMAIN}/collections/all`} target="_blank" rel="noreferrer">
             Tienda completa
           </a>
           <img src="./Logo ARTE Y SABOR GOURME.svg" alt="Sabor y Arte Gourmet" className="brand-logo" />
@@ -497,9 +497,6 @@ function App() {
             </form>
 
             <div className="nav-actions">
-              <a className="nav-pill" href={`https://${SHOPIFY_DOMAIN}`} target="_blank" rel="noreferrer">
-                Ver Shopify
-              </a>
               <a className="btn" href={`https://${SHOPIFY_DOMAIN}/collections/all`} target="_blank" rel="noreferrer">
                 Ver tienda
               </a>
@@ -588,7 +585,7 @@ function App() {
               <p className="eyebrow">Explora nuestra selección</p>
               <h2>Caviar, pato y hongos</h2>
             </div>
-            <a href={`https://${SHOPIFY_DOMAIN}`} target="_blank" rel="noreferrer">
+            <a href={`https://${SHOPIFY_DOMAIN}/collections/all`} target="_blank" rel="noreferrer">
               Ver todo →
             </a>
           </div>
@@ -668,7 +665,7 @@ function App() {
               <p className="eyebrow">También te puede interesar</p>
               <h2>Más productos</h2>
             </div>
-            <a href={`https://${SHOPIFY_DOMAIN}`} target="_blank" rel="noreferrer">
+            <a href={`https://${SHOPIFY_DOMAIN}/collections/all`} target="_blank" rel="noreferrer">
               Ver catálogo completo →
             </a>
           </div>
@@ -704,7 +701,7 @@ function App() {
             <a className="btn" href="https://wa.me/5210000000000" target="_blank" rel="noreferrer">
               Cotizar por WhatsApp
             </a>
-            <a className="btn ghost" href={`https://${SHOPIFY_DOMAIN}`} target="_blank" rel="noreferrer">
+            <a className="btn ghost" href={`https://${SHOPIFY_DOMAIN}/collections/all`} target="_blank" rel="noreferrer">
               Ir a tienda
             </a>
           </div>
@@ -776,7 +773,7 @@ function App() {
             <a href={`https://${SHOPIFY_DOMAIN}/collections/all?filter.p.tag=Pato`} target="_blank" rel="noreferrer">Pato</a>
             <a href={`https://${SHOPIFY_DOMAIN}/collections/all?filter.p.tag=hongo`} target="_blank" rel="noreferrer">Hongos</a>
             <a href={`https://${SHOPIFY_DOMAIN}/products/trufa-invierno`} target="_blank" rel="noreferrer">Trufa</a>
-            <a href={`https://${SHOPIFY_DOMAIN}`} target="_blank" rel="noreferrer">Tienda completa</a>
+            <a href={`https://${SHOPIFY_DOMAIN}/collections/all`} target="_blank" rel="noreferrer">Tienda completa</a>
             <a href="mailto:hola@saboryarte.com">hola@saboryarte.com</a>
           </div>
         </div>
