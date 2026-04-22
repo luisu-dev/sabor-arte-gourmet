@@ -181,18 +181,12 @@ function productUrl(handle) {
    PROMO BANNER — aparece cada vez que se abre la página
    ============================================ */
 function PromoBanner({ onClose }) {
-  const [showForm, setShowForm] = useState(false);
-  const [sent, setSent] = useState(false);
-  const [form, setForm] = useState({ nombre: "", telefono: "", email: "", mensaje: "" });
-
-  function handleChange(e) {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  }
+  const [email, setEmail] = useState("");
+  const [revealed, setRevealed] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
-    // Aquí puedes conectar con tu backend, Formspree, etc.
-    setSent(true);
+    setRevealed(true);
   }
 
   return (
@@ -207,107 +201,54 @@ function PromoBanner({ onClose }) {
 
         <div className="promo-deco"></div>
 
-        {!showForm ? (
+        {!revealed ? (
           <>
             <p className="eyebrow">Oferta de bienvenida</p>
             <h2 className="promo-title">10% en tu primera compra</h2>
             <p className="promo-copy">
-              Productos de especialidad con descuento exclusivo en tu primer pedido. Reclama tu código y úsalo al finalizar tu compra.
+              Ingresa tu correo y te revelamos el código exclusivo para usarlo en tu primer pedido.
             </p>
 
-            <div className="promo-code-box">
+            <div className="promo-code-box" style={{filter:"blur(6px)", userSelect:"none", pointerEvents:"none"}}>
               <span className="promo-code-label">Tu código exclusivo</span>
               <span className="promo-code-value">BIENVENIDO10</span>
             </div>
 
-            <div className="promo-actions">
-              <button className="btn" onClick={() => setShowForm(true)}>
-                Reclamar descuento
-              </button>
-              <button className="btn ghost" onClick={onClose}>
-                Continuar sin descuento
-              </button>
-            </div>
-          </>
-        ) : sent ? (
-          <>
-            <p className="eyebrow">¡Listo!</p>
-            <h2 className="promo-title">Te contactamos pronto.</h2>
-            <p className="promo-copy">
-              Recibimos tus datos. En breve te enviamos tu código <strong style={{color:"var(--gold)"}}>BIENVENIDO10</strong> por WhatsApp o email.
-            </p>
-            <button className="btn" style={{width:"100%", borderRadius:"var(--r)"}} onClick={onClose}>
-              Ir a la tienda
-            </button>
-          </>
-        ) : (
-          <>
-            <p className="eyebrow">Reclamar descuento</p>
-            <h2 className="promo-title" style={{fontSize:"clamp(1.5rem,3vw,2rem)", marginBottom:"1.2rem"}}>
-              Déjanos tus datos
-            </h2>
-
-            <form className="promo-form" onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="pf-nombre">Nombre</label>
-                <input
-                  id="pf-nombre"
-                  name="nombre"
-                  type="text"
-                  placeholder="Tu nombre completo"
-                  value={form.nombre}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="pf-telefono">Teléfono</label>
-                <input
-                  id="pf-telefono"
-                  name="telefono"
-                  type="tel"
-                  placeholder="+52 55 0000 0000"
-                  value={form.telefono}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="pf-email">Email</label>
-                <input
-                  id="pf-email"
-                  name="email"
-                  type="email"
-                  placeholder="tu@correo.com"
-                  value={form.email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="pf-mensaje">¿Algo específico que busques?</label>
-                <textarea
-                  id="pf-mensaje"
-                  name="mensaje"
-                  placeholder="Ej. busco un kit de regalo para una cena de 6 personas…"
-                  value={form.mensaje}
-                  onChange={handleChange}
-                  rows={3}
-                />
-              </div>
-
+            <form className="promo-form" onSubmit={handleSubmit} style={{marginTop:"1.2rem"}}>
+              <input
+                type="email"
+                placeholder="tu@correo.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                style={{width:"100%", marginBottom:"0.75rem"}}
+              />
               <div className="promo-actions">
                 <button className="btn" type="submit">
-                  Enviar y reclamar código
+                  Revelar mi código
                 </button>
-                <button className="btn ghost" type="button" onClick={() => setShowForm(false)}>
-                  Volver
+                <button className="btn ghost" type="button" onClick={onClose}>
+                  Continuar sin descuento
                 </button>
               </div>
             </form>
+          </>
+        ) : (
+          <>
+            <p className="eyebrow">¡Tu código está listo!</p>
+            <h2 className="promo-title">10% en tu primera compra</h2>
+            <p className="promo-copy">
+              Copia el código y úsalo al finalizar tu compra en la tienda.
+            </p>
+            <div className="promo-code-box">
+              <span className="promo-code-label">Tu código exclusivo</span>
+              <span className="promo-code-value">BIENVENIDO10</span>
+            </div>
+            <div className="promo-actions" style={{marginTop:"1.2rem"}}>
+              <button className="btn" style={{width:"100%"}} onClick={onClose}>
+                Ir a la tienda
+              </button>
+            </div>
           </>
         )}
       </div>
@@ -756,15 +697,12 @@ function App() {
             <a href={`https://${SHOPIFY_DOMAIN}/collections/pato`} target="_blank" rel="noreferrer">Pato</a>
             <a href={`https://${SHOPIFY_DOMAIN}/collections/hongos`} target="_blank" rel="noreferrer">Hongos</a>
             <a href={`https://${SHOPIFY_DOMAIN}/collections/trufa`} target="_blank" rel="noreferrer">Trufa</a>
+            <a href={`https://${SHOPIFY_DOMAIN}/collections/all`} target="_blank" rel="noreferrer">Tienda completa</a>
           </div>
           <div>
-            <strong>Productos</strong>
-            <a href={`https://${SHOPIFY_DOMAIN}/collections/caviar`} target="_blank" rel="noreferrer">Caviar</a>
-            <a href={`https://${SHOPIFY_DOMAIN}/collections/pato`} target="_blank" rel="noreferrer">Pato</a>
-            <a href={`https://${SHOPIFY_DOMAIN}/collections/hongos`} target="_blank" rel="noreferrer">Hongos</a>
-            <a href={`https://${SHOPIFY_DOMAIN}/collections/trufa`} target="_blank" rel="noreferrer">Trufa</a>
-            <a href={`https://${SHOPIFY_DOMAIN}/collections/all`} target="_blank" rel="noreferrer">Tienda completa</a>
-            <a href="mailto:hola@saboryarte.com">hola@saboryarte.com</a>
+            <strong>Contacto</strong>
+            <a href="mailto:ventas@saboryartegourmet.com.mx">ventas@saboryartegourmet.com.mx</a>
+            <a href="https://wa.me/529841872094" target="_blank" rel="noreferrer">WhatsApp</a>
           </div>
         </div>
       </footer>
