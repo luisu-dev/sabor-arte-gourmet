@@ -175,9 +175,6 @@ function productUrl(handle) {
   return `https://${SHOPIFY_DOMAIN}/products/${handle}`;
 }
 
-function directCartUrl(variantId) {
-  return `https://${SHOPIFY_DOMAIN}/cart/${variantId}:1`;
-}
 
 
 /* ============================================
@@ -462,7 +459,6 @@ function App() {
           <div className="container top-strip-content">
             <span>Envío gratis arriba de $5,000 MXN</span>
             <span>Entrega refrigerada 24–48h</span>
-            <span>Compra directa desde la home</span>
           </div>
         </div>
 
@@ -649,9 +645,6 @@ function App() {
                   <a className="btn" href={productUrl(product.handle)} target="_blank" rel="noreferrer">
                     Ver producto
                   </a>
-                  <a className="btn ghost" href={directCartUrl(product.variantId)} target="_blank" rel="noreferrer">
-                    Comprar
-                  </a>
                 </div>
               </article>
             ))}
@@ -681,9 +674,6 @@ function App() {
                 <div className="reserve-links">
                   <a href={productUrl(product.handle)} target="_blank" rel="noreferrer">
                     Ver producto
-                  </a>
-                  <a href={directCartUrl(product.variantId)} target="_blank" rel="noreferrer">
-                    Comprar ahora
                   </a>
                 </div>
               </article>
