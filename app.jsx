@@ -49,13 +49,13 @@ const categories = [
     copy: "Foie gras, magret, confit y más cortes de pato nacional e importado.",
     image:
       "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/productos_sabor_arte6.png?v=1775222363",
-    handle: "Pato",
+    handle: "pato",
   },
   {
     name: "Hongos",
     copy: "Morilla, porcini, shiitake, setas frescas y mezclas deshidratadas.",
     image: "./hero/hongos.png",
-    handle: "hongo",
+    handle: "hongos",
   },
   {
     name: "Trufa",
@@ -472,7 +472,7 @@ function App() {
             Tienda completa
           </a>
           <img src="./Logo ARTE Y SABOR GOURME.svg" alt="Sabor y Arte Gourmet" className="brand-logo" />
-          <a className="utility-link" href="https://wa.me/5210000000000" target="_blank" rel="noreferrer">
+          <a className="utility-link" href="https://wa.me/529841872094" target="_blank" rel="noreferrer">
             WhatsApp
           </a>
         </div>
@@ -595,7 +595,7 @@ function App() {
               <a
                 className="category-card"
                 key={category.name}
-                href={`https://${SHOPIFY_DOMAIN}/collections/all?sort_by=title&filter.p.tag=${category.handle}`}
+                href={`https://${SHOPIFY_DOMAIN}/collections/${category.handle}`}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -698,7 +698,7 @@ function App() {
             <h2>Caviar, pato y hongos con precios de mayoreo para tu restaurante o negocio.</h2>
           </div>
           <div className="service-actions">
-            <a className="btn" href="https://wa.me/5210000000000" target="_blank" rel="noreferrer">
+            <a className="btn" href="https://wa.me/529841872094" target="_blank" rel="noreferrer">
               Cotizar por WhatsApp
             </a>
             <a className="btn ghost" href={`https://${SHOPIFY_DOMAIN}/collections/all`} target="_blank" rel="noreferrer">
@@ -762,17 +762,17 @@ function App() {
           </div>
           <div>
             <strong>Categorías</strong>
-            <a href={`https://${SHOPIFY_DOMAIN}/collections/all?filter.p.tag=caviar`} target="_blank" rel="noreferrer">Caviar</a>
-            <a href={`https://${SHOPIFY_DOMAIN}/collections/all?filter.p.tag=Pato`} target="_blank" rel="noreferrer">Pato</a>
-            <a href={`https://${SHOPIFY_DOMAIN}/collections/all?filter.p.tag=hongo`} target="_blank" rel="noreferrer">Hongos</a>
-            <a href={`https://${SHOPIFY_DOMAIN}/products/trufa-invierno`} target="_blank" rel="noreferrer">Trufa</a>
+            <a href={`https://${SHOPIFY_DOMAIN}/collections/caviar`} target="_blank" rel="noreferrer">Caviar</a>
+            <a href={`https://${SHOPIFY_DOMAIN}/collections/pato`} target="_blank" rel="noreferrer">Pato</a>
+            <a href={`https://${SHOPIFY_DOMAIN}/collections/hongos`} target="_blank" rel="noreferrer">Hongos</a>
+            <a href={`https://${SHOPIFY_DOMAIN}/collections/trufa`} target="_blank" rel="noreferrer">Trufa</a>
           </div>
           <div>
             <strong>Productos</strong>
-            <a href={`https://${SHOPIFY_DOMAIN}/collections/all?filter.p.tag=caviar`} target="_blank" rel="noreferrer">Caviar</a>
-            <a href={`https://${SHOPIFY_DOMAIN}/collections/all?filter.p.tag=Pato`} target="_blank" rel="noreferrer">Pato</a>
-            <a href={`https://${SHOPIFY_DOMAIN}/collections/all?filter.p.tag=hongo`} target="_blank" rel="noreferrer">Hongos</a>
-            <a href={`https://${SHOPIFY_DOMAIN}/products/trufa-invierno`} target="_blank" rel="noreferrer">Trufa</a>
+            <a href={`https://${SHOPIFY_DOMAIN}/collections/caviar`} target="_blank" rel="noreferrer">Caviar</a>
+            <a href={`https://${SHOPIFY_DOMAIN}/collections/pato`} target="_blank" rel="noreferrer">Pato</a>
+            <a href={`https://${SHOPIFY_DOMAIN}/collections/hongos`} target="_blank" rel="noreferrer">Hongos</a>
+            <a href={`https://${SHOPIFY_DOMAIN}/collections/trufa`} target="_blank" rel="noreferrer">Trufa</a>
             <a href={`https://${SHOPIFY_DOMAIN}/collections/all`} target="_blank" rel="noreferrer">Tienda completa</a>
             <a href="mailto:hola@saboryarte.com">hola@saboryarte.com</a>
           </div>
