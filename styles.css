@@ -120,14 +120,14 @@ h2 {
 }
 
 .brand-logo {
-  height: 72px;
+  height: 110px;
   width: auto;
   display: block;
   object-fit: contain;
 }
 
 .brand-logo--footer {
-  height: 84px;
+  height: 130px;
   margin-bottom: 0.75rem;
 }
 
