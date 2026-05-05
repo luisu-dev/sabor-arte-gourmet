@@ -41,20 +41,19 @@ const categories = [
   {
     name: "Caviar",
     copy: "Beluga, Oscetra y Baerii en presentaciones de 30 g, 50 g y 100 g.",
-    image: "./hero/caviar.png",
+    image: "./hero/caviar-real.jpg",
     handle: "caviar",
   },
   {
     name: "Pato",
     copy: "Foie gras, magret, confit y más cortes de pato nacional e importado.",
-    image:
-      "https://cdn.shopify.com/s/files/1/0719/5197/4444/files/productos_sabor_arte6.png?v=1775222363",
+    image: "./hero/pato-real.jpg",
     handle: "pato",
   },
   {
     name: "Hongos",
     copy: "Morilla, porcini, shiitake, setas frescas y mezclas deshidratadas.",
-    image: "./hero/hongos.png",
+    image: "./hero/hongos-real.jpg",
     handle: "hongos",
   },
   {
